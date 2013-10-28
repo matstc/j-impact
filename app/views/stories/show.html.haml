@@ -14,8 +14,8 @@
   = @story.date
 %p
   %b Outlets:
-  = @story.outlets
+  = @story.outlets.map {|o|o.name}.join(", ")
 
-= link_to 'Edit', edit_story_path(@story)
+= link_to 'Modify', edit_story_path(@story)
 \|
-= link_to 'Back', stories_path
+= link_to 'All stories', stories_path
