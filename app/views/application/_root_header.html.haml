@@ -1,7 +1,9 @@
-%ul.nav.nav-tabs
-  %li
+%ul.nav.nav-tabs.root-nav
+  %li{:class => ('active' if request.path == root_path)}
     = link_to 'Home', root_path
-  %li
+
+  %li{:class => ('active' if request.path == stories_path)}
     = link_to 'Stories', stories_path
-  %li
+
+  %li{:class => ('active' if request.path == outlets_path)}
     = link_to 'Outlets', outlets_path
