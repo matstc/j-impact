@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Headline:
+  = @story.headline
+%p
+  %b Link:
+  = @story.link
+%p
+  %b Slug:
+  = @story.slug
+%p
+  %b Date:
+  = @story.date
+%p
+  %b Outlets:
+  = @story.outlets
+
+= link_to 'Edit', edit_story_path(@story)
+\|
+= link_to 'Back', stories_path

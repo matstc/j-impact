@@ -1,0 +1,20 @@
+.page-header
+  %h1 Listing outlets
+
+%table.table.table-striped
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @outlets.each do |outlet|
+    %tr
+      %td= outlet.name
+      %td= link_to 'Show', outlet
+      %td= link_to 'Edit', edit_outlet_path(outlet)
+      %td= link_to 'Destroy', outlet, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Outlet', new_outlet_path
