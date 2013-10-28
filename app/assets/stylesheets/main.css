@@ -1,7 +1,9 @@
 body, *, div, html {font-family: 'Ubuntu', sans-serif;}
 h1, h2, h3, h4, h5, h6, ul.nav li a, th {font-family: 'Alegreya', serif;}
-ul.nav li a, th {font-size:150%;}
+ul.nav li a, th {font-size:130%;}
+
 .footer {margin-top:3em; background-color: #777; color: white; border: 1px solid #333; border-width:1px 0 0 0;}
+.footer p {line-height:0.9em; font-size:100%;}
 .footer .main, .footer-sidebar {padding:1em;}
 .footer-sidebar {background-color:#999; color:white;}
 .root-nav {margin-top:1em;}
