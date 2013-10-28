@@ -1,0 +1,22 @@
+= simple_form_for @event, :html => { :class => 'form-horizontal' } do |f|
+
+  -if @event.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@event.errors.count, "error")} prohibited this outlet from being saved:"
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li= msg
+
+  .control-group.string
+    %label.string.control-label
+      Story
+    .controls
+      %p
+        = @event.story
+  = f.input :event_type
+  = f.input :date
+  = f.input :story_id, {as: :hidden}
+
+  .form-actions
+    = f.button :submit
+

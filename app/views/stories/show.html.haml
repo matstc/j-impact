@@ -15,7 +15,15 @@
 %p
   %b Outlets:
   = @story.outlets.map {|o|o.name}.join(", ")
+%p 
+  %b Events:
+  %ul
+  - @story.events.each do |e|
+    %li= e
 
+
+= link_to 'Add event', new_event_path(@story)
+\|
 = link_to 'Modify', edit_story_path(@story)
 \|
 = link_to 'All stories', stories_path

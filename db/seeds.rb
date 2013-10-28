@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+outlets = Outlet.create([{name: 'New York Times'},{name: 'Washington Post'}, {name: 'The Tyee'}])
+stories = Story.create([{headline: 'Dying fish'},{headline: 'Corruption strikes back'},{headline: 'Unwarranted promotion'}])

@@ -1,7 +1,8 @@
 JImpactRailsApp::Application.routes.draw do
   resources :outlets
-
   resources :stories
+  resources :events
+  match 'events/new/:story_id' => 'events#new', :as => :new_event
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

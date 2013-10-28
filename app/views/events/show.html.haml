@@ -1,0 +1,18 @@
+.page-header
+  %h1 Event
+
+%p#notice= notice
+
+%p
+  %b Event Type:
+  = @event.event_type
+%p
+  %b Story:
+  = @event.story
+%p
+  %b Date:
+  = @event.date
+
+= link_to 'Modify', edit_event_path(@event)
+\|
+= link_to 'Go to story', story_path(@event.story)
