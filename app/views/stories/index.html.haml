@@ -5,7 +5,7 @@
   %tr
     %th Headline
     %th Link
-    %th Slug
+    %th # Events
     %th Date
     %th Outlets
     %th
@@ -14,10 +14,10 @@
 
   - @stories.each do |story|
     %tr
-      %td= story.headline
-      %td= story.link
-      %td= story.slug
-      %td= story.date
+      %td= truncate story.headline
+      %td= truncate story.link_for_display
+      %td= story.events.count
+      %td= story.date_for_display
       %td= story.outlets.map {|o| o.name}.join(", ")
       %td= link_to 'Show', story
       %td= link_to 'Modify', edit_story_path(story)

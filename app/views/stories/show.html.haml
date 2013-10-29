@@ -20,13 +20,13 @@
   = @story.headline
 %p
   %b Link:
-  = @story.link
+  = link_to @story.link_for_display, @story.link, rel: 'nofollow'
 %p
   %b Slug:
   = @story.slug
 %p
-  %b Date:
-  = @story.date
+  %b Date
+  = @story.date_for_display
 %p
   %b Outlets:
   = @story.outlets.map {|o|o.name}.join(", ")

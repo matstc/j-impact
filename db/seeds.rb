@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 outlets = Outlet.create([{name: 'New York Times'},{name: 'Washington Post'}, {name: 'The Tyee'}])
 
-stories = Story.create([{headline: 'Dying fish', outlet_ids: [outlets[0].id]},{headline: 'Corruption strikes back', outlet_ids: [outlets[1].id]},{headline: 'Unwarranted promotion'}])
+stories = Story.create([{headline: 'Dying fish', link: "http://example.com/dying-fish", outlet_ids: [outlets[0].id]},{headline: 'Corruption strikes back', outlet_ids: [outlets[1].id]},{headline: 'Unwarranted promotion'}])
 
 events = Event.create([{event_type: 'Local pickup', description: 'Story was carried by the local bugle.', date: 8.days.ago, story_id: stories[0].id},{event_type: 'blog post', description: 'A prominent blogger responded to the story.', date: 3.days.ago, story_id: stories[0].id}])
