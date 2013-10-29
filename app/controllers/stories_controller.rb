@@ -80,4 +80,12 @@ class StoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def timeline
+    @story = Story.find(params[:id])
+    respond_to do |format|
+      format.json {render}
+    end
+  end
+
 end

@@ -1,5 +1,21 @@
 %p#notice= notice
 
+.row
+  .span1
+  .span10
+    <div id="timeline-embed"></div>
+    :javascript
+      $(document).ready(function(){
+        createStoryJS({
+            type:       'timeline',
+            width:      '970',
+            height:     '400',
+            source:     '#{timeline_path(@story)}',
+            embed_id:   'timeline-embed'
+        });
+      });
+  .span1
+
 %p
   %b Headline:
   = @story.headline
@@ -17,13 +33,12 @@
   = @story.outlets.map {|o|o.name}.join(", ")
 %p 
   %b Events:
-  %ul
-  - @story.events.each do |e|
-    %li= e
+  %ul.nav.nav-stacked
+    - @story.events.each do |e|
+      %li
+        = link_to e.to_s, event_path(e)
 
 
 = link_to 'Add event', new_event_path(@story)
 \|
 = link_to 'Modify', edit_story_path(@story)
-\|
-= link_to 'All stories', stories_path

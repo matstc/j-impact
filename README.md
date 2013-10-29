@@ -9,3 +9,19 @@ A lot of analytics are available for measuring the size of a digital audience, b
 
 # License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+
+# Other Licensed Work
+The following files were taken from [TimelineJS](https://github.com/NUKnightLab/TimelineJS) under a Mozilla Public License:
+
+- app/assets/images/blank.gif
+- app/assets/images/fancybox_sprite.png
+- app/assets/images/fancybox_sprite@2x.png
+- app/assets/images/loading.gif
+- app/assets/images/themes/ and everything under that directory
+- app/assets/images/timeline.css
+- app/assets/images/timeline.png
+- app/assets/images/timeline@2x.png
+- app/assets/javascripts/storyjs-embed.js
+- app/assets/javascripts/timeline-min.js
+- app/assets/stylesheets/timeline.css
+- 

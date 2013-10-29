@@ -1,0 +1,39 @@
+<% @date_format = "%Y,%m,%d" %>
+{
+    "timeline":
+    {
+        "headline": "<%= @story.headline %>",
+        "type":"default",
+        "text":"A timeline of this story and its impact",
+        "asset": {
+            "media":"",
+            "credit":"",
+            "caption":""
+        },
+        "date": [
+        <%= raw(@story.events.map { |e| 
+            %Q[
+              {
+                "startDate":"#{e.date.strftime(@date_format)}",
+                "endDate":"#{e.date.strftime(@date_format)}",
+                "headline":"#{e.event_type}", 
+                "text":"<p>Body text goes here, some HTML is OK</p>",
+                "tag":"", 
+                "classname":"", 
+                "asset": { "media":"", "thumbnail":"", "credit":"", "caption":"" }
+              }]}.join(",")) %>
+        ],
+        "era": [
+        <% if @story.events.count > 1 %>
+          <%= raw(
+              %Q[{
+                    "startDate":"#{@story.events.sort{|e1, e2| e1.date <=> e2.date}[0].date.strftime(@date_format)}",
+                    "endDate":"#{@story.events.sort{|e1, e2| e2.date <=> e1.date}[0].date.strftime(@date_format)}",
+                    "headline":"The impact window",
+                    "text":"",
+                    "tag":""
+                }]) %>
+        <% end %>
+        ]
+    }
+}

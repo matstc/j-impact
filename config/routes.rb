@@ -3,6 +3,7 @@ JImpactRailsApp::Application.routes.draw do
   resources :stories
   resources :events
   match 'events/new/:story_id' => 'events#new', :as => :new_event
+  match 'stories/:id/timeline.json' => 'stories#timeline', :as => :timeline, :format => :json
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
