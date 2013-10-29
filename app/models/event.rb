@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
   belongs_to :story
 
   validates :story, presence: true
+  default_scope order('date ASC')
 
   def to_s
     event_type

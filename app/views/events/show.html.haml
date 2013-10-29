@@ -8,11 +8,9 @@
   = @event.event_type
 %p
   %b Story:
-  = @event.story
+  = link_to @event.story, story_path(@event.story)
 %p
   %b Date:
   = @event.date
 
 = link_to 'Modify', edit_event_path(@event)
-\|
-= link_to 'Go to story', story_path(@event.story)
