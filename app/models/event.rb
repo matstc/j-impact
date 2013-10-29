@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :event_type, :date, :story_id
+  attr_accessible :event_type, :date, :story_id, :description
   belongs_to :story
 
   validates :story, presence: true
