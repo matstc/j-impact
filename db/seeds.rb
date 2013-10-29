@@ -6,5 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 outlets = Outlet.create([{name: 'New York Times'},{name: 'Washington Post'}, {name: 'The Tyee'}])
-stories = Story.create([{headline: 'Dying fish'},{headline: 'Corruption strikes back'},{headline: 'Unwarranted promotion'}])
-events = Event.create([{event_type: 'Local pickup', story_id: stories[0].id},{event_type: 'blog post', story_id: stories[0].id}])
+
+stories = Story.create([{headline: 'Dying fish', outlet_ids: [outlets[0].id]},{headline: 'Corruption strikes back', outlet_ids: [outlets[1].id]},{headline: 'Unwarranted promotion'}])
+
+events = Event.create([{event_type: 'Local pickup', description: 'Story was carried by the local bugle.', date: 8.days.ago, story_id: stories[0].id},{event_type: 'blog post', description: 'A prominent blogger responded to the story.', date: 3.days.ago, story_id: stories[0].id}])

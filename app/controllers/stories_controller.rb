@@ -14,6 +14,7 @@ class StoriesController < ApplicationController
   # GET /stories/1.json
   def show
     @story = Story.find(params[:id])
+    @alert = "There are no events with dates linked to this story. The timeline will not display." if @story.events_with_dates.empty?
 
     respond_to do |format|
       format.html # show.html.erb

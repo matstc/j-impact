@@ -11,5 +11,9 @@
 
     .container
       = render 'root_header'
+
+      %p#notice= flash[:notice]
+      %p#alert= @alert
+
       = yield
       = render 'root_footer'

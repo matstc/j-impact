@@ -1,20 +1,19 @@
-%p#notice= notice
-
-.row
-  .span1
-  .span10
-    <div id="timeline-embed"></div>
-    :javascript
-      $(document).ready(function(){
-        createStoryJS({
-            type:       'timeline',
-            width:      '970',
-            height:     '400',
-            source:     '#{timeline_path(@story)}',
-            embed_id:   'timeline-embed'
+- if not @story.events_with_dates.empty?
+  .row
+    .span1
+    .span10
+      <div id="timeline-embed"></div>
+      :javascript
+        $(document).ready(function(){
+          createStoryJS({
+              type:       'timeline',
+              width:      '970',
+              height:     '400',
+              source:     '#{timeline_path(@story)}',
+              embed_id:   'timeline-embed'
+          });
         });
-      });
-  .span1
+    .span1
 
 %p
   %b Headline:
