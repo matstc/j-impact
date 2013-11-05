@@ -25,8 +25,8 @@ application.js: application-71828c826e97d293bbe100435a4e26b2.js
 application/index.js: application-71828c826e97d293bbe100435a4e26b2.js
 application.css: application-dce34057df1a70d6fef4fd91d93b08cf.css
 application/index.css: application-dce34057df1a70d6fef4fd91d93b08cf.css
-storyjs-embed.js: storyjs-embed-bb8f12d305acb75d3502ed73b5046152.js
-storyjs-embed/index.js: storyjs-embed-bb8f12d305acb75d3502ed73b5046152.js
+storyjs-embed.js: storyjs-embed-00404e2ab7697178b99938c127379f19.js
+storyjs-embed/index.js: storyjs-embed-00404e2ab7697178b99938c127379f19.js
 timeline-min.js: timeline-min-d152c3258e9cd3be63388ba0620cdfbe.js
 timeline-min/index.js: timeline-min-d152c3258e9cd3be63388ba0620cdfbe.js
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
