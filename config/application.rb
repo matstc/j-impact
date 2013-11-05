@@ -57,7 +57,7 @@ module JImpactRailsApp
     config.assets.enabled = true
 
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += ['storyjs-embed.js', 'timeline-min.js', 'timeline.css']
+    config.assets.precompile += ['storyjs-embed.js']
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
