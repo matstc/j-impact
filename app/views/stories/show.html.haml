@@ -23,13 +23,7 @@
 %br
 %h2= @story.headline
 
-.ul.nav-pills.nav
-  %li
-    = link_to edit_story_path(@story) do
-      %span.icon.icon-edit
-      Modify
-
-%table.table.table-striped
+%table.table.table-striped.narrow-th
   %tr 
     %th Link
     %td= link_to @story.link_for_display, @story.link, rel: 'nofollow'
@@ -57,3 +51,8 @@
             %span.icon.icon-plus
             Add event
 
+.ul.nav-pills.nav
+  %li
+    = link_to edit_story_path(@story) do
+      %span.icon.icon-edit
+      Modify story

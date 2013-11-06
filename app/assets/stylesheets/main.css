@@ -15,3 +15,5 @@ td ul li {list-style-type:square;}
 a .icon {margin-right:3px;}
 
 textarea#event_description {width:50%; height:120px;}
+
+table.narrow-th th {width:150px;}
