@@ -1,11 +1,13 @@
-.row-fluid.footer
-  .span7.main
+.row-fluid.footer.muted
+  .span9.main
     %p
       This application is being built 
       = link_to "at github.", "https://github.com/matstc/j-impact"
     %p Thanks for reporting bugs.
     %p Thanks for contributing code.
 
-  .span5.footer-sidebar
-    %p This app is licensed under CC BY-NC-SA
+  .span3
+    This app is licensed under
+    = link_to "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US" do
+      .label.info CC BY-NC-SA
 

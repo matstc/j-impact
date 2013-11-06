@@ -12,8 +12,10 @@
     .container
       = render 'root_header'
 
-      %p#notice= flash[:notice]
-      %p#alert= @alert
+      - if not flash[:notice].blank?
+        .alert.alert-success= flash[:notice]
+      - if not @alert.blank?
+        .alert= @alert
 
       = yield
       = render 'root_footer'

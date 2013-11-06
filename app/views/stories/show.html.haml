@@ -17,29 +17,43 @@
         });
     .span1
 
-%p
-  %b Headline:
-  = @story.headline
-%p
-  %b Link:
-  = link_to @story.link_for_display, @story.link, rel: 'nofollow'
-%p
-  %b Slug:
-  = @story.slug
-%p
-  %b Date
-  = @story.date_for_display
-%p
-  %b Outlets:
-  = @story.outlets.map {|o|o.name}.join(", ")
-%p 
-  %b Events:
-  %ul.nav.nav-stacked
-    - @story.events.each do |e|
-      %li
-        = link_to e.to_s, event_path(e)
+%br
+%br
+%br
+%br
+%h2= @story.headline
 
+.ul.nav-pills.nav
+  %li
+    = link_to edit_story_path(@story) do
+      %span.icon.icon-edit
+      Modify
 
-  = link_to 'Add event', new_event_path(@story)
+%table.table.table-striped
+  %tr 
+    %th Link
+    %td= link_to @story.link_for_display, @story.link, rel: 'nofollow'
+  %tr
+    %th Slug
+    %td= @story.slug
+  %tr
+    %th Date
+    %td= @story.date_for_display
+  %tr
+    %th Outlets
+    %td
+      != @story.outlets.map {|o| link_to o.name, outlet_path(o)}.join(", ")
+  %tr
+    %th Events
+    %td
+      %ol
+        - @story.events.each do |e|
+          %li
+            = link_to e.to_s, event_path(e)
+      
+      .ul.nav-pills.nav
+        %li
+          = link_to new_event_path(@story) do
+            %span.icon.icon-plus
+            Add event
 
-= link_to 'Modify', edit_story_path(@story)
