@@ -21,7 +21,7 @@
       %td= story.outlets.map {|o| o.name}.join(", ")
       %td= link_to 'Show', story
       %td= link_to 'Modify', edit_story_path(story)
-      %td= link_to 'Remove', story, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Remove', story, data: {confirm: 'Are you sure?'}, method: :delete
 
 %br
 

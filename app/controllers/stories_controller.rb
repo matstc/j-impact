@@ -41,7 +41,7 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
-    @story = Story.new(params[:story])
+    @story = Story.new(story_params)
 
     respond_to do |format|
       if @story.save
@@ -60,7 +60,7 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
 
     respond_to do |format|
-      if @story.update_attributes(params[:story])
+      if @story.update_attributes(story_params)
         format.html { redirect_to @story, notice: 'Story was successfully updated.' }
         format.json { head :no_content }
       else
@@ -87,6 +87,10 @@ class StoriesController < ApplicationController
     respond_to do |format|
       format.json {render}
     end
+  end
+
+  def story_params
+    params.require(:story).permit(:id, :date, :headline, :link, :slug, outlet_ids: [])
   end
 
 end

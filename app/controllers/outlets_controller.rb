@@ -40,7 +40,7 @@ class OutletsController < ApplicationController
   # POST /outlets
   # POST /outlets.json
   def create
-    @outlet = Outlet.new(params[:outlet])
+    @outlet = Outlet.new(outlet_params)
 
     respond_to do |format|
       if @outlet.save
@@ -59,7 +59,7 @@ class OutletsController < ApplicationController
     @outlet = Outlet.find(params[:id])
 
     respond_to do |format|
-      if @outlet.update_attributes(params[:outlet])
+      if @outlet.update_attributes(outlet_params)
         format.html { redirect_to @outlet, notice: 'Outlet was successfully updated.' }
         format.json { head :no_content }
       else
@@ -79,5 +79,9 @@ class OutletsController < ApplicationController
       format.html { redirect_to outlets_url }
       format.json { head :no_content }
     end
+  end
+
+  def outlet_params
+    params.require(:outlet).permit(:name)
   end
 end
