@@ -3,15 +3,22 @@ h1, h2, h3, h4, h5, h6, ul.nav li a, th {font-family: 'Alegreya', serif;}
 ul.nav li a, th {font-size:130%;}
 td ul li {list-style-type:square;}
 
-.footer {font-size:85%; border-top:1px solid #ddd; margin-top:4em; padding-top:1em;}
-.footer p {line-height:0.9em;}
-.root-nav {margin-top:1em;}
-.root-nav a {color:#88a;}
-.root-nav a:visited {color:#88a;}
-.root-nav a:hover {color:#88a;}
+.footer {
+  font-size:85%; border-top:1px solid #ddd; margin-top:4em; padding-top:1em;
+  p {line-height:0.9em;}
+}
+
+.root-nav {
+  margin-top:1em;
+  a {color:#88a;}
+  a:visited {color:#88a;}
+  a:hover {color:#88a;}
+}
 
 .slim-well {padding-bottom:0;}
+
 .big-font-well {font-size:120%;}
+
 a .icon {margin-right:3px;}
 
 textarea#event_description {width:50%; height:120px;}
