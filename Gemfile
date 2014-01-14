@@ -25,6 +25,12 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'selenium-webdriver'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
